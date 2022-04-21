@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fundamentos JavaScript</h1>
+    <script>
+        /*
+        // con let si podemos tener constantes vacias
+        // podemos crearla sin agignarle ningun valor y despues asignarle el valor que queramos
+        let a;
+        // no podemos tener constantes vacias
+        const PI = 3.1416;
+        // valor asignado por la variable let vacia
+        a = 'kanai';
+        console.log(a)
+        //toUpperCase() pone el texto en mayusculas
+        // toLowerCas() pone el texto en minusculas
+        */
+
+        /* **********     Curso JavaScript: 5. Cadenas de Texto (Strings) - #jonmircha     ********** */
+        //Cadenas de Texto aka Strings
+        /*
+        let nombre = "Jon";
+        let apellido = 'MirCha';
+        let saludo = new String("Hola Mundo");
+
+        let lorem = "       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, et dolorum. Adipisci sequi, voluptates accusamus earum magnam non pariatur odit consequuntur dicta modi. Quam soluta aliquid nam ea quod dolore.      ";
+
+        console.log(nombre, apellido, saludo);
+        console.log(
+          nombre.length,
+          apellido.length,
+          saludo.length,
+          nombre.toUpperCase(),
+          apellido.toLowerCase(),
+          lorem.includes("amet"), //con incluide buscamos en el texto si esa palabra existe
+          lorem.includes("jon"),
+          lorem,
+          lorem.trim(), //con trim quitamos los espacios en blanco que tenemos en el lorem
+          lorem.split(" "), //convierne a cada palabra en un arreglo
+          lorem.split(",")
+        );
+        */
+
+         /* **********     Curso JavaScript: 6. Template Strings - #jonmircha     ********** */
+        /* 
+        let nombre = "Jon";
+        let apellido = "MirCha";
+ 
+        // Concatenación
+        let saludo = "Hola mi nombre es " + nombre + " " + apellido + ".";
+        console.log(saludo); 
+
+        // Interpolción de variables
+        //Template String
+        let saludo2 = `Hola mi nombre es ${nombre} ${apellido}.`;
+        console.log(saludo2); 
+
+        // CON TEMPLATE STRINGS NOR PERMITE HACER UNA LISTA CON ESPACIOS
+        let ul2 = `
+            <ul>
+                <li>Primavera</li>
+                <li>Verano</li>
+                <li>Otoño</li>
+                <li>Invierno</li>
+            </ul>
+        `;
+        console.log(ul2); 
+        */
+
+          /* **********     Curso JavaScript: 7. Números (Numbers) - #jonmircha     ********** */
+        /*
+        let a = 2;
+        let b = new Number(1);
+        let c = 7.19;
+        let d = "5.6";
+
+        console.log(a, b);
+        console.log(c.toFixed(1));
+        console.log(c.toFixed(5));
+        console.log(parseInt(c));
+        console.log(parseFloat(c));
+        //el typeof nos dice de que tipo de dato es una variable
+        //en este caso nos dice que el valor c es un numero y el valor d es un string o una cadena de texto
+        console.log(typeof c, typeof d); 
+        console.log(a + b);
+        //como el valor d es un tipo cadena, hay que convertirlo, hacer un cambio de tipo de dato
+        //se hace con parseInt y de esa manera se puede hacer la suma
+        console.log(c + parseInt(d));
+        //con parseFloat hace la suma entera, sin todos los decimales que tiene
+        console.log(c + parseFloat(d));
+        console.log(c + Number.parseInt(d));
+        console.log(c + Number.parseFloat(d)); */
+
+           /* **********     Curso JavaScript: 8. Booleans - #jonmircha     ********** */
+        /*
+        let verdadero = true;
+        let falso = false;
+        let v = Boolean(true);
+        let f = Boolean(false);
+        console.log(verdadero, falso, v, f);
+        console.log(typeof verdadero, typeof falso);
+        console.log(Boolean(0));
+        console.log(Boolean(-7)); //un numero negativo tiende a verdadero
+        console.log(Boolean("")); //una cadena de teto vacia tiende a falso
+        //cualquier cadena de texto con algun caracter, aunque sea un espacio en blanco da true
+        console.log(Boolean(" ")); 
+        */
+
+        /* **********     Curso JavaScript: 9. undefined, null & NaN - #jonmircha     ********** */
+
+        //undefined indica que no se ha inicializado una variable y que el valor está ausente
+        /*let indefinida;
+        console.log(indefinida); */
+
+        //null es un valor especial que indica la ausencia de un valor
+        /*let nulo = null;
+        console.log(null); */
+
+        //NaN - Not a Number
+        /*let noEsUnNumero = "hola" * 3.7;
+        console.log(noEsUnNumero); */
+
+         /* **********     Curso JavaScript: 10. Funciones - #jonmircha     ********** */
+
+        /*
+        Una función es un bloque de código, autocontenido, que se puede definir una vez y ejecutar en cualquier momento. Opcionalmente, una función puede aceptar parámetros y devolver un valor.
+        Las funciones en JavaScript son objetos, un tipo especial de objetos:
+        Se dice que las funciones son ciudadanos de primera clase porque pueden asignarse a un valor, y pueden pasarse como argumentos y usarse como un valor de retorno.
+        */
+
+        //Declaración de función
+        function estoEsUnaFuncion() {
+        console.log("Uno");
+        console.log("Dos");
+        console.log("Tres");
+        } 
+
+        //PARA QUE LAS FUNCIONES SE EJECUTEN HAY QUE MANDARLA A LLAMAR
+        //LAS FUNCIONES SIEMPRE TIENEN QUE IR CON SUS PARENTESIS
+        
+        //Invocación de función
+        /* estoEsUnaFuncion();
+        estoEsUnaFuncion();
+        estoEsUnaFuncion();
+        estoEsUnaFuncion(); */
+
+        //CUANDO USAMOS UNA FUNCION QUE DEVUELVE UN VALOR SE DEBE USAR EL RETURN
+        /*
+        function unaFuncionQueDevuelveValor() {
+        console.log("Uno");
+        //SI SE COLOCA EL RETURN ANTES, LA FUNCION IGNORA TODO LO QUE HAY DEBAJO DEL RETURN
+        return 19;
+        console.log("Dos");
+        console.log("Tres");
+        return "La función ha retornado una Cadena de texto";
+        } 
+        //SE CREO UNA VARIABLE PARA LO QUE SE RETORNO DE LA FUNCION
+        let valorDeFuncion = unaFuncionQueDevuelveValor();
+
+        console.log(valorDeFuncion); 
+        */
+
+        /* 
+        function saludar(nombre = "Desconocido", edad = 0) {
+        console.log(`Hola mi nombre es ${nombre} y tengo ${edad} años.`);
+        }
+
+        saludar("kEnAi", 7);
+        saludar(); 
+        */
+
+        //Funciones declaradas VS funciones expresadas
+
+        //funcionDeclarada();
+
+        /* function funcionDeclarada() {
+        console.log("Esto es un función declarada, puede invocarse en cualquier parte de nuestro código, incluso antes de que la función sea declarada");
+        } */
+
+        //funcionDeclarada();
+
+        //funcionExpresada();
+
+        //función anónima
+        /* const funcionExpresada = function () {
+        console.log("Esto es una función expresada, es decir, una función que se le ha asignado como valor a una variable, si invocamos esta función antes de su definición JS nos dirá 'Cannot access 'funcionExpresada' before initialization'")
+        } */
+
+        //funcionExpresada();
+
+
+        /* **********     Curso JavaScript: 11. Arreglos (Arrays) - #jonmircha     ********** */
+
+            /*        
+            const a = [];
+            const b = [1, true, "Hola", ["A", "B", "C", [1, 2, 3]]];
+            console.log(a);
+            console.log(b);
+            console.log(b.length);
+            console.log(b[2]); //imprimir Hola que esta en su posicion 2
+            console.log(b[0]);
+            console.log(b[3]);
+            //la posicion 3 es el arreglo a,b,c y le decimos que imprima la letra c que su posicion seria la 2
+            console.log(b[3][2]); 
+            console.log(b[3][3][0]); //imprimir el 1 que esta dentro de arreglo a,b,c
+
+            const c = Array.of("X", "Y", "Z", 9, 8, 7); //el of nos da el tipo al que pertenece
+            console.log(c);
+
+            //arreglo que tiene 100 posiciones y todas fueron inicializadas con el valor de false
+            const d = Array(100).fill(false); 
+            console.log(d);
+        
+            //YA NO SE USA
+            const e = new Array();
+            console.log(e);
+
+            //YA NO SE USA
+            const f = new Array(1, 2, 3, true, false);
+            console.log(f);
+
+            const colores = ["Rojo", "Verde", "Azul"];
+            console.log(colores);
+            colores.push("Negro"); //agregar un nuevo elemento al final
+            console.log(colores);
+            colores.pop();  //quita el ultimo elemento
+            console.log(colores);
+             
+            colores.forEach(function (el, index) {
+            console.log(`<li id="${index}">${el}</li>`); //con el index se agrego los id a cada elemento
+            }); 
+            */
+
+
+             /* **********     Curso JavaScript: 12. Objetos - #jonmircha     ********** */
+
+            /* let a = new String("Hola");
+            console.log(a)
+            const b = {}
+            console.log(b);
+            const c = new Object();
+            console.log(c); */
+            
+            /* dentro de un objeto a las variables se le van a llamar atributos/propiedades y a las funciones se les llama métodos */
+
+            /* const jon = {
+            nombre: "Jon",
+            apellido: "MirCha",
+            edad: 35,
+            pasatiempos: ["Correr", "Hacer ejercicio", "Dar clases"],
+            soltero: false,
+            contacto: {
+                email: "jonmircha@gmail.com",
+                twitter: "@jonmircha",
+                movil: "5215512345678"
+            },
+            saludar: function () {
+                console.log(`Hola :)`)
+            },
+            decirMiNombre: function () {
+                console.log(`Hola me llamo ${this.nombre} ${this.apellido} y tengo ${this.edad} años y me puedes seguir como ${this.contacto.twitter} en twitter.`)
+            }
+            }
+            console.log(jon);
+            console.log(jon["nombre"]);
+            console.log(jon["apellido"]);
+            console.log(jon.nombre);
+            console.log(jon.apellido);
+            console.log(jon.edad);
+            console.log(jon.soltero);
+            console.log(jon.pasatiempos);
+            console.log(jon.pasatiempos[1]);
+            console.log(jon.contacto);
+            console.log(jon.contacto.twitter);
+            jon.saludar();
+            jon.decirMiNombre();
+            console.log(Object.keys(jon));
+            console.log(Object.values(jon));
+            console.log(jon.hasOwnProperty("nombre"));
+            console.log(jon.hasOwnProperty("nacimiento"));
+        */
+
+
+         /* **********     Curso JavaScript: 13. Tipos de Operadores - #jonmircha     ********** */
+
+        /* Operadores */
+        /* Aritméticos:  + - * / % ()  */
+
+        /*
+        //primero resuelve la operacion dentro el parentesis, luego la multiplica y despues la suma
+        let a = 5 + (5 - 10) * 3; 
+        let modulo = 5 % 2; //el modulo devuelve el residuo de la division 
+        console.log(a);
+        console.log(modulo);
+        */
+
+        /*  Relacionales: >, <,   >=, <=, ==, ===, !=, !== */
+
+        /* console.log(8 > 9);
+        console.log(9 > 8);
+        console.log(8 >= 9);
+        console.log(9 >= 8);
+        console.log(7 < 7);
+        console.log(7 <= 7); */
+
+        /*
+        = 1 igual es asignación  de variable
+        == 2 iguales es comparacion de valores
+        === 3 igulaes es comparación de tipo de dato y de valor
+        */
+       //UTILIZAR DOBLE IGUAL == YA SE CONSIDERA UNA MALA PRACTICA
+       //LA BUENA PRACTICA DICE QUE SIEMPRE SE DEBE USAR LA DE LOS TRES IGUALES ===
+
+        /* console.log(7 == 7);
+        console.log("7" == 7);
+        console.log(0 == false);
+        console.log(7 === 7);
+        console.log("7" === 7);
+        console.log(0 === false); */
+
+        /* Incremento Decremento */
+        /* let i = 2;
+        console.log(i++);
+        console.log(++i); */
+
+        //i = i + 2;
+        //i *= 3;
+
+        //operador unario
+        /* i++;
+        i--;
+        ++i;
+        --i;
+        console.log(i); */
+
+        /*
+        Lógicos
+        ! - Not : Niega, es decir lo que es verdadero lo vuelve falso y viceversa
+        || - Or: Cuando tengo 2 o más condiciones, con que una se cumpla, es decir sea verdadera, el OR será verdadero.
+        && - And: Cuando tengo 2 o más condiciones, todas tienen que cumplirse, es decir ser verdaderas, para que AND se valide */
+        /*
+        console.log(!true);
+        console.log(!false);
+        console.log((9 === 9) || ("9" === 9));
+        console.log((9 === 9) && ("9" === 9));
+        console.log((9 === 9) && ("9" === "9")); */
+
+        /* **********     Curso JavaScript: 14. Condicionales - #jonmircha     ********** */
+        /* if - else */
+
+        // let edad = 19;
+
+        /* 
+        if(edad > 17) {
+            console.log("Eres mayor de edad")
+        }else{
+            console.log("Eres menor de edad")
+        }
+
+        if(edad >= 18) {
+            console.log("Eres mayor de edad")
+        }else{
+            console.log("Eres menor de edad")
+        }
+
+        if(edad < 18) {
+            console.log("Eres menor de edad")
+        }else{
+            console.log("Eres mayor de edad")
+        }
+
+        if(edad <= 18) {
+            console.log("Eres menor de edad")
+        }else{
+            console.log("Eres mayor de edad")
+        } 
+        */
+
+        /* if - else if - else */
+        /*
+        Déjame Dormir - 0hrs - 5hrs
+        Buenos dias 6hrs - 11hrs
+        Buenas tardes 12hrs - 18hrs
+        Buenas noches 19hrs - 23hrs
+        */
+
+        /* let hora = 19;
+
+        if(hora >=0 && hora <= 5) {
+            console.log('Dejame Dormir')
+        }else if(hora >=6 && hora <=11){
+            console.log("Buenos Dias")
+        }else if(hora >=12 && hora <=18){
+            console.log("Buenas Tardes")
+        }else{ //como ya es el ultimo lo mandamos asi, cualquier otra opcion 
+            console.log("Buenas Noches")
+        }
+
+        if(hora < 6) { //en los operadores simples esta demas colocar hora <0 por eso se deja asi
+            console.log('Dejame Dormir')
+        }else if(hora >5 && hora <12){
+            console.log("Buenos Dias")
+        }else if(hora >11 && hora <19){
+            console.log("Buenas Tardes")
+        }else{ 
+            console.log("Buenas Noches")
+        }
+        */
+
+        /* Operador Ternario (condición) ? verdadero : falsa */
+        /*
+        console.log("Operador Ternario")
+        let eresMayor = (edad >=18) 
+        ? "Eres Mayor de Edad" 
+        : "Eres Menor de Edad";
+
+        console.log(eresMayor)
+        */
+
+        /* switch - case */
+
+        /*
+        domingo -0
+        lunes - 1
+        martes - 2
+        miércoles - 3
+        jueves - 4
+        viernes - 5
+        sábado - 6
+        */
+
+        /* let dia= 10;
+
+        switch (dia) {
+            case 0:
+                console.log("Domingo")
+                break;
+            case 1:
+                console.log("Lunes")
+                break;
+            case 2:
+                console.log("Martes")
+                break;
+            case 3:
+                console.log("Miercoles")
+                break;
+            case 4:
+                console.log("Jueves")
+                break;
+            case 5:
+                console.log("Viernes")
+                break;
+            case 6:
+                console.log("Sabado")
+                break;
+        
+            default:
+                console.log("El dia no existe")
+                break;
+        }
+        */
+
+
+
+         /* **********     Curso JavaScript: 15. Ciclos (Loops) - #jonmircha     ********** */
+         let contador = 0;
+
+        while(contador > 10){
+            console.log(contador);
+            contador++;
+ }
+         
+    </script>
+</body>
+</html>
